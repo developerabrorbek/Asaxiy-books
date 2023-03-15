@@ -42,3 +42,12 @@
     cursor: pointer;
     opacity: 0.7;
 }
+
+
+.basketWrapper{
+    display: none;
+}
+
+.header-extra:hover .basketWrapper{
+    display: flex;
+}

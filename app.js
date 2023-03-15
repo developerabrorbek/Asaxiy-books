@@ -7,6 +7,8 @@ let elInput = $(".search");
 let languages = $(".books-lang");
 let authors = $(".books-author");
 let elLinks = $(".hero-links");
+let elBasket = $(".basketWrapper");
+
 
 let languageArr = [];
 let authorsArr = [];
@@ -45,7 +47,7 @@ books.filter(item => {
 languageArr.forEach(item=>{
     let newLi = elCreator("option", `${item}`);
     languages.appendChild(newLi)
-})
+});
 
 languages.addEventListener("change",(evt)=>{
     let elValue = languages.value;
@@ -58,7 +60,7 @@ languages.addEventListener("change",(evt)=>{
     } else{
         renderUi(books, 8);
     }
-})
+});
 
 
 
@@ -73,7 +75,7 @@ books.filter(item => {
 authorsArr.forEach(item=>{
     let newLi = elCreator("option", `${item}`);
     authors.appendChild(newLi)
-})
+});
 
 authors.addEventListener("change",(evt)=>{
     let elValue = authors.value;
@@ -86,7 +88,7 @@ authors.addEventListener("change",(evt)=>{
     } else{
         renderUi(books, 8);
     }
-})
+});
 
 
 
@@ -102,16 +104,28 @@ elInput.addEventListener("input", (evt)=>{
     } else{
         renderUi(books, 8);
     }
-})
+});
 
 
 
 
 
+// books.forEach(item=>{
+//     // let basket = item.querySelector(".basket");
+//     let targetThing = undefined;
+
+//     item.addEventListener("click",(evt)=>{
+//         console.log(item.target);
+//     })
+// })
 
 
 
-
+cards.addEventListener("click", (evt)=>{
+    if(evt.target.classList.contains("basket")){
+        console.log(evt.target.setAttribute("dataSet","true"));
+    }
+});
 
 
 
