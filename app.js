@@ -108,19 +108,6 @@ elInput.addEventListener("input", (evt)=>{
 
 
 
-
-
-// books.forEach(item=>{
-//     // let basket = item.querySelector(".basket");
-//     let targetThing = undefined;
-
-//     item.addEventListener("click",(evt)=>{
-//         console.log(item.target);
-//     })
-// })
-
-
-
 cards.addEventListener("click", (evt)=>{
     if(evt.target.classList.contains("basket")){
         console.log(evt.target.setAttribute("dataSet","true"));
